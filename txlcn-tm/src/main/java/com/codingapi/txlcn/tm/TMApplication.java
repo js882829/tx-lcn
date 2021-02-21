@@ -15,23 +15,21 @@
  */
 package com.codingapi.txlcn.tm;
 
-import com.codingapi.txlcn.tm.support.TxLcnManagerBanner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
- * Description:
- * Company: CodingApi
- * Date: 2018/11/29
+ * Description: Company: CodingApi Date: 2018/11/29
  *
  * @author lorne
  */
 @SpringBootApplication
+@EnableScheduling
 public class TMApplication {
 
-    public static void main(String[] args) {
-        SpringApplication springApplication = new SpringApplication(TMApplication.class);
-        springApplication.setBanner(new TxLcnManagerBanner());
-        springApplication.run(args);
-    }
+  public static void main(String[] args) {
+    SpringApplication springApplication = new SpringApplication(TMApplication.class);
+    springApplication.run(args);
+  }
 }
